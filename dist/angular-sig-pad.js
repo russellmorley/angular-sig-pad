@@ -34,13 +34,13 @@
                       }
                   };
 
-                  sigPad.onEnd = function() {
+                  sigPad.onEnd = function() { // event called when stroke ends. 
                       scope.$evalAsync(getDataFromSigPad);
                   };
 
                   getDataFromSigPad();
 
-                  function getDataFromSigPad() {
+                  function getDataFromSigPad() { // save contents of sigPad. Called on init and onEnd when a stroke ends.
                       ngModel.$setViewValue(sigPad.toDataURL());
                   }
 
@@ -75,7 +75,7 @@
                           }
                       }
 
-                  }); //timeout
+                  }); //$timeout default is 0
               }
           }; //return
       } // function
