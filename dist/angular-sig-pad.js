@@ -15,7 +15,8 @@
     [
       '$window',
       '$timeout',
-      function ($window, $timeout) {
+      '$log',
+      function ($window, $timeout, $log) {
           return {
               restrict: 'A', //attribute only - element should be a canvas
               require: '?ngModel', //get NgModelController associated with ng-model attribute on canvas element
@@ -35,12 +36,14 @@
                   };
 
                   sigPad.onEnd = function() { // event called when stroke ends. 
+                      //$log.debug('IN ONEND');
                       scope.$evalAsync(getDataFromSigPad);
                   };
 
                   getDataFromSigPad();
 
                   function getDataFromSigPad() { // save contents of sigPad. Called on init and onEnd when a stroke ends.
+                     //$log.debug('IN GETDATAFROMSIGPAD');
                       ngModel.$setViewValue(sigPad.toDataURL());
                   }
 
@@ -53,7 +56,7 @@
                           sigPad.minWidth = attrs.angularSigPadMinWidth;
                       }
 
-                      if !attrs.angularSigPadMaxWidth) {
+                      if (attrs.angularSigPadMaxWidth) {
                           sigPad.maxWidth = attrs.angularSigPadMaxWidth;
                       }
 
