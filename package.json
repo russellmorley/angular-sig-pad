@@ -1,0 +1,19 @@
+{
+  "name": "angular-sig-pad",
+  "version": "0.1.0",
+  "description": "A signature pad directive for Angular",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/russellmorley/angular-sig-pad.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/russellmorley/angular-sig-pad/issues"
+  },
+  "homepage": "https://github.com/russellmorley/angular-sig-pad#readme"
+}
