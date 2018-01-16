@@ -1,6 +1,6 @@
 {
   "name": "angular-sig-pad",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A signature pad directive for Angular",
   "main": "index.js",
   "scripts": {
