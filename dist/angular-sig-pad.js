@@ -40,8 +40,6 @@
                       scope.$evalAsync(getDataFromSigPad);
                   };
 
-                  getDataFromSigPad();
-
                   function getDataFromSigPad() { // save contents of sigPad. Called on init and onEnd when a stroke ends.
                      //$log.debug('IN GETDATAFROMSIGPAD');
                       ngModel.$setViewValue(sigPad.toDataURL());
